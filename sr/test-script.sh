@@ -1,3 +1,5 @@
+ #!/bin/bash
+ 
 echo "Hello world"
 sleep 10s
 echo "Wake up!"
