@@ -6,8 +6,10 @@ jobs:
   hosted-runner:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello world"
-      - run: sleep 10s
+      - uses: actions/checkout@v2
+      - run: |
+          chmod +x /src/test-script.sh
+          ./src/test-script.sh
     
   selfhosted-runner:
     runs-on: self-hosted
