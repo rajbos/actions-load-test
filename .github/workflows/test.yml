@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+  push:
+  
+jobs:
+  hosted-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world"
+      - run: sleep 10s
+    
+  selfhosted-runner:
+    runs-on: self-hosted
+    steps:
+      - run: echo "Hello world"
+      - run: sleep 10s
+    
