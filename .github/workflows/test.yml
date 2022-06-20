@@ -12,6 +12,14 @@ jobs:
   selfhosted-runner:
     runs-on: self-hosted
     steps:
-      - run: echo "Hello world"
-      - run: sleep 10s
-    
+      - run: |
+          echo "Hello world"
+          sleep 10s
+          echo "Wake up!"
+          
+      - run: |
+          for i in ${1-120}
+          do
+            echo "$i"
+            sleep 1s
+          done
