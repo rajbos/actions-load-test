@@ -7,15 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          ls -la
-          chmod +x /home/runner/work/actions-load-test/actions-load-test/sr/test-script.sh
+      - name: execute test
+        run: |
+          chmod +x /sr/test-script.sh
           ./sr/test-script.sh
     
   selfhosted-runner:
     runs-on: self-hosted
     steps:
-      - run: |
-          chmod +x /home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
-          ./home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
+      - name: execute test
+        run: |
+          chmod +x /sr/test-script.sh
+          ./sr/test-script.sh
           
