@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          ls -la
           chmod +x /home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
           ./home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
     
