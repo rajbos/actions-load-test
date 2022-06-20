@@ -8,20 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          chmod +x /src/test-script.sh
-          ./src/test-script.sh
+          chmod +x /home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
+          ./home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
     
   selfhosted-runner:
     runs-on: self-hosted
     steps:
       - run: |
-          echo "Hello world"
-          sleep 10s
-          echo "Wake up!"
+          chmod +x /home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
+          ./home/runner/work/actions-load-test/actions-load-test/src/test-script.sh
           
-      - run: |
-          for i in ${1-120}
-          do
-            echo "$i"
-            sleep 1s
-          done
