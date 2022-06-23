@@ -17,6 +17,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: execute test
         run: |
-          chmod +x /home/runner/work/actions-load-test/actions-load-test/sr/test-script.sh
+          chmod +x /home/runner/_work/actions-load-test/actions-load-test/sr/test-script.sh
           ./sr/test-script.sh
           
